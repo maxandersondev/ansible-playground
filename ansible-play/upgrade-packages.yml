@@ -1,0 +1,12 @@
+---
+# select hosts
+- hosts: local
+  connection: local
+  become: yes
+  become_user: root
+  tasks:
+  - name: Upgrade Packages
+    apt:
+      name: "*"
+      state: latest
+      
